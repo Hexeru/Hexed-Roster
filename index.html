@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TGN Party Boss Blitz Roster</title>
+  <title>Hexed Party Boss Blitz Roster</title>
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -1246,8 +1246,8 @@
   <header>
     <div class="header-container">
       <a href="./" class="header-title" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 8px;">
-        <img src="assets/images/favicon-32x32.png" alt="TGN Logo" width="24" height="24" style="filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))">
-        <span>TGN</span>
+        <img src="assets/images/favicon-32x32.png" alt="Hexed Logo" width="24" height="24" style="filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))">
+        <span>Hexed</span>
       </a>
       <div class="user-panel" id="userPanel">
         <!-- Content will be dynamically generated -->
@@ -1269,7 +1269,7 @@
         </div>
       </div>
     </div>
-    <a href="/TGN-Roster/pages/profile/index.html" class="dropdown-item" id="profile-link">Profile</a>
+    <a href="/Hexed-Roster/pages/profile/index.html" class="dropdown-item" id="profile-link">Profile</a>
     <div class="dropdown-divider"></div>
     <button class="dropdown-item" id="logout-btn">Logout</button>
   </div>
@@ -1277,7 +1277,7 @@
   <div id="floating-user-info"></div>
 
   <div class="container">
-    <h1>TGN Party Boss Blitz Roster</h1>
+    <h1>Hexed Party Boss Blitz Roster</h1>
     
     <div class="description">
       This page organizes static groups for the weekly <strong>Party Boss Blitz</strong> content.<br>
@@ -1327,7 +1327,7 @@
     <div class="last-updated" id="lastUpdated"></div>
     
     <footer>
-      Powered by TGN &middot; User Managed Roster
+      Powered by Hexed &middot; User Managed Roster
     </footer>
   </div>
 
@@ -1981,7 +1981,7 @@
         const uid = users[username];
         
         // Sign in with email/password (using the UID as email for simplicity)
-        await auth.signInWithEmailAndPassword(`${username.toLowerCase()}@tgn.com`, password);
+        await auth.signInWithEmailAndPassword(`${username.toLowerCase()}@hexed.com`, password);
         
         // Login successful - the auth state listener will handle the rest
         closeModal('loginModal');
@@ -2028,7 +2028,7 @@
         }
     
         // 2. Create auth user
-        const fakeEmail = `${username}@tgn.com`;
+        const fakeEmail = `${username}@hexed.com`;
         const userCredential = await auth.createUserWithEmailAndPassword(fakeEmail, password);
         const uid = userCredential.user.uid;
     
@@ -2406,7 +2406,7 @@
       const dataStr = JSON.stringify(allData, null, 2);
       const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
       
-      const exportFileDefaultName = 'tgn_roster.json';
+      const exportFileDefaultName = 'hexed_roster.json';
       
       let linkElement = document.createElement('a');
       linkElement.setAttribute('href', dataUri);
